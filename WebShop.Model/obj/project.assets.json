@@ -57,11 +57,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Pufnica\\source\\repos\\WebShop.Model\\WebShop.Model.csproj",
+      "projectUniqueName": "C:\\Users\\Pufnica\\Desktop\\WebShop-ConsoleApp\\WebShop.Model\\WebShop.Model.csproj",
       "projectName": "WebShop.Model",
-      "projectPath": "C:\\Users\\Pufnica\\source\\repos\\WebShop.Model\\WebShop.Model.csproj",
+      "projectPath": "C:\\Users\\Pufnica\\Desktop\\WebShop-ConsoleApp\\WebShop.Model\\WebShop.Model.csproj",
       "packagesPath": "C:\\Users\\Pufnica\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Pufnica\\source\\repos\\WebShop.Model\\obj\\",
+      "outputPath": "C:\\Users\\Pufnica\\Desktop\\WebShop-ConsoleApp\\WebShop.Model\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Pufnica\\AppData\\Roaming\\NuGet\\NuGet.Config",

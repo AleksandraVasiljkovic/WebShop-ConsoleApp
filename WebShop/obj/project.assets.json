@@ -5268,11 +5268,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Pufnica\\source\\repos\\WebShop\\WebShop.UI.Consol.csproj",
+      "projectUniqueName": "C:\\Users\\Pufnica\\Desktop\\WebShop-ConsoleApp\\WebShop\\WebShop.UI.Consol.csproj",
       "projectName": "WebShop.UI.Consol",
-      "projectPath": "C:\\Users\\Pufnica\\source\\repos\\WebShop\\WebShop.UI.Consol.csproj",
+      "projectPath": "C:\\Users\\Pufnica\\Desktop\\WebShop-ConsoleApp\\WebShop\\WebShop.UI.Consol.csproj",
       "packagesPath": "C:\\Users\\Pufnica\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Pufnica\\source\\repos\\WebShop\\obj\\",
+      "outputPath": "C:\\Users\\Pufnica\\Desktop\\WebShop-ConsoleApp\\WebShop\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Pufnica\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5288,11 +5288,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Pufnica\\source\\repos\\WebShop.Bsn\\WebShop.Bsn.csproj": {
-              "projectPath": "C:\\Users\\Pufnica\\source\\repos\\WebShop.Bsn\\WebShop.Bsn.csproj"
+            "C:\\Users\\Pufnica\\Desktop\\WebShop-ConsoleApp\\WebShop.Bsn\\WebShop.Bsn.csproj": {
+              "projectPath": "C:\\Users\\Pufnica\\Desktop\\WebShop-ConsoleApp\\WebShop.Bsn\\WebShop.Bsn.csproj"
             },
-            "C:\\Users\\Pufnica\\source\\repos\\WebShop.Model\\WebShop.Model.csproj": {
-              "projectPath": "C:\\Users\\Pufnica\\source\\repos\\WebShop.Model\\WebShop.Model.csproj"
+            "C:\\Users\\Pufnica\\Desktop\\WebShop-ConsoleApp\\WebShop.Model\\WebShop.Model.csproj": {
+              "projectPath": "C:\\Users\\Pufnica\\Desktop\\WebShop-ConsoleApp\\WebShop.Model\\WebShop.Model.csproj"
             }
           }
         }
