@@ -1,0 +1,397 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Pufnica\\source\\repos\\WebShop\\WebShop.UI.Consol.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Pufnica\\source\\repos\\WebShop.Bsn\\WebShop.Bsn.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Pufnica\\source\\repos\\WebShop.Bsn\\WebShop.Bsn.csproj",
+        "projectName": "WebShop.Bsn",
+        "projectPath": "C:\\Users\\Pufnica\\source\\repos\\WebShop.Bsn\\WebShop.Bsn.csproj",
+        "packagesPath": "C:\\Users\\Pufnica\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Pufnica\\source\\repos\\WebShop.Bsn\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Pufnica\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\Pufnica\\source\\repos\\WebShop.Data\\WebShop.Data.csproj": {
+                "projectPath": "C:\\Users\\Pufnica\\source\\repos\\WebShop.Data\\WebShop.Data.csproj"
+              },
+              "C:\\Users\\Pufnica\\source\\repos\\WebShop.Model\\WebShop.Model.csproj": {
+                "projectPath": "C:\\Users\\Pufnica\\source\\repos\\WebShop.Model\\WebShop.Model.csproj"
+              },
+              "C:\\Users\\Pufnica\\source\\repos\\WebShopEF.Data\\WebShopEF.Data.csproj": {
+                "projectPath": "C:\\Users\\Pufnica\\source\\repos\\WebShopEF.Data\\WebShopEF.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "AWSSDK": {
+              "target": "Package",
+              "version": "[2.3.55.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Pufnica\\source\\repos\\WebShop.Data\\WebShop.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Pufnica\\source\\repos\\WebShop.Data\\WebShop.Data.csproj",
+        "projectName": "WebShop.Data",
+        "projectPath": "C:\\Users\\Pufnica\\source\\repos\\WebShop.Data\\WebShop.Data.csproj",
+        "packagesPath": "C:\\Users\\Pufnica\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Pufnica\\source\\repos\\WebShop.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Pufnica\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\Pufnica\\source\\repos\\WebShop.Interfaces\\WebShop.Interfaces.csproj": {
+                "projectPath": "C:\\Users\\Pufnica\\source\\repos\\WebShop.Interfaces\\WebShop.Interfaces.csproj"
+              },
+              "C:\\Users\\Pufnica\\source\\repos\\WebShop.Model\\WebShop.Model.csproj": {
+                "projectPath": "C:\\Users\\Pufnica\\source\\repos\\WebShop.Model\\WebShop.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Pufnica\\source\\repos\\WebShop.Interfaces\\WebShop.Interfaces.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Pufnica\\source\\repos\\WebShop.Interfaces\\WebShop.Interfaces.csproj",
+        "projectName": "WebShop.Interfaces",
+        "projectPath": "C:\\Users\\Pufnica\\source\\repos\\WebShop.Interfaces\\WebShop.Interfaces.csproj",
+        "packagesPath": "C:\\Users\\Pufnica\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Pufnica\\source\\repos\\WebShop.Interfaces\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Pufnica\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\Pufnica\\source\\repos\\WebShop.Model\\WebShop.Model.csproj": {
+                "projectPath": "C:\\Users\\Pufnica\\source\\repos\\WebShop.Model\\WebShop.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Pufnica\\source\\repos\\WebShop.Model\\WebShop.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Pufnica\\source\\repos\\WebShop.Model\\WebShop.Model.csproj",
+        "projectName": "WebShop.Model",
+        "projectPath": "C:\\Users\\Pufnica\\source\\repos\\WebShop.Model\\WebShop.Model.csproj",
+        "packagesPath": "C:\\Users\\Pufnica\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Pufnica\\source\\repos\\WebShop.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Pufnica\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Pufnica\\source\\repos\\WebShopEF.Data\\WebShopEF.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Pufnica\\source\\repos\\WebShopEF.Data\\WebShopEF.Data.csproj",
+        "projectName": "WebShopEF.Data",
+        "projectPath": "C:\\Users\\Pufnica\\source\\repos\\WebShopEF.Data\\WebShopEF.Data.csproj",
+        "packagesPath": "C:\\Users\\Pufnica\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Pufnica\\source\\repos\\WebShopEF.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Pufnica\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\Pufnica\\source\\repos\\WebShop.Data\\WebShop.Data.csproj": {
+                "projectPath": "C:\\Users\\Pufnica\\source\\repos\\WebShop.Data\\WebShop.Data.csproj"
+              },
+              "C:\\Users\\Pufnica\\source\\repos\\WebShop.Model\\WebShop.Model.csproj": {
+                "projectPath": "C:\\Users\\Pufnica\\source\\repos\\WebShop.Model\\WebShop.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Pufnica\\source\\repos\\WebShop\\WebShop.UI.Consol.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Pufnica\\source\\repos\\WebShop\\WebShop.UI.Consol.csproj",
+        "projectName": "WebShop.UI.Consol",
+        "projectPath": "C:\\Users\\Pufnica\\source\\repos\\WebShop\\WebShop.UI.Consol.csproj",
+        "packagesPath": "C:\\Users\\Pufnica\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Pufnica\\source\\repos\\WebShop\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Pufnica\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\Pufnica\\source\\repos\\WebShop.Bsn\\WebShop.Bsn.csproj": {
+                "projectPath": "C:\\Users\\Pufnica\\source\\repos\\WebShop.Bsn\\WebShop.Bsn.csproj"
+              },
+              "C:\\Users\\Pufnica\\source\\repos\\WebShop.Model\\WebShop.Model.csproj": {
+                "projectPath": "C:\\Users\\Pufnica\\source\\repos\\WebShop.Model\\WebShop.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

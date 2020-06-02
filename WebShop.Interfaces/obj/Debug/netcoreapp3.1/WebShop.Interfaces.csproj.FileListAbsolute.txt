@@ -1,0 +1,11 @@
+C:\Users\Pufnica\source\repos\WebShop.Interfaces\bin\Debug\netcoreapp3.1\WebShop.Interfaces.deps.json
+C:\Users\Pufnica\source\repos\WebShop.Interfaces\bin\Debug\netcoreapp3.1\WebShop.Interfaces.dll
+C:\Users\Pufnica\source\repos\WebShop.Interfaces\bin\Debug\netcoreapp3.1\WebShop.Interfaces.pdb
+C:\Users\Pufnica\source\repos\WebShop.Interfaces\bin\Debug\netcoreapp3.1\WebShop.Model.dll
+C:\Users\Pufnica\source\repos\WebShop.Interfaces\bin\Debug\netcoreapp3.1\WebShop.Model.pdb
+C:\Users\Pufnica\source\repos\WebShop.Interfaces\obj\Debug\netcoreapp3.1\WebShop.Interfaces.csprojAssemblyReference.cache
+C:\Users\Pufnica\source\repos\WebShop.Interfaces\obj\Debug\netcoreapp3.1\WebShop.Interfaces.AssemblyInfoInputs.cache
+C:\Users\Pufnica\source\repos\WebShop.Interfaces\obj\Debug\netcoreapp3.1\WebShop.Interfaces.AssemblyInfo.cs
+C:\Users\Pufnica\source\repos\WebShop.Interfaces\obj\Debug\netcoreapp3.1\WebShop.Interfaces.csproj.CopyComplete
+C:\Users\Pufnica\source\repos\WebShop.Interfaces\obj\Debug\netcoreapp3.1\WebShop.Interfaces.dll
+C:\Users\Pufnica\source\repos\WebShop.Interfaces\obj\Debug\netcoreapp3.1\WebShop.Interfaces.pdb

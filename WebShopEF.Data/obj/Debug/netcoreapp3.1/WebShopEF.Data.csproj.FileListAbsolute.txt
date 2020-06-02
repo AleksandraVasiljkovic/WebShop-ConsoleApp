@@ -1,0 +1,17 @@
+C:\Users\Pufnica\source\repos\WebShopEF.Data\bin\Debug\netcoreapp3.1\WebShopEF.Data.deps.json
+C:\Users\Pufnica\source\repos\WebShopEF.Data\bin\Debug\netcoreapp3.1\WebShopEF.Data.dll
+C:\Users\Pufnica\source\repos\WebShopEF.Data\obj\Debug\netcoreapp3.1\WebShopEF.Data.csprojAssemblyReference.cache
+C:\Users\Pufnica\source\repos\WebShopEF.Data\obj\Debug\netcoreapp3.1\WebShopEF.Data.AssemblyInfoInputs.cache
+C:\Users\Pufnica\source\repos\WebShopEF.Data\obj\Debug\netcoreapp3.1\WebShopEF.Data.AssemblyInfo.cs
+C:\Users\Pufnica\source\repos\WebShopEF.Data\bin\Debug\netcoreapp3.1\WebShop.Data.dll
+C:\Users\Pufnica\source\repos\WebShopEF.Data\bin\Debug\netcoreapp3.1\WebShop.Interfaces.dll
+C:\Users\Pufnica\source\repos\WebShopEF.Data\bin\Debug\netcoreapp3.1\WebShop.Model.dll
+C:\Users\Pufnica\source\repos\WebShopEF.Data\bin\Debug\netcoreapp3.1\WebShop.Data.pdb
+C:\Users\Pufnica\source\repos\WebShopEF.Data\bin\Debug\netcoreapp3.1\WebShop.Model.pdb
+C:\Users\Pufnica\source\repos\WebShopEF.Data\bin\Debug\netcoreapp3.1\WebShop.Interfaces.pdb
+C:\Users\Pufnica\source\repos\WebShopEF.Data\obj\Debug\netcoreapp3.1\WebShopEF.Data.csproj.CopyComplete
+C:\Users\Pufnica\source\repos\WebShopEF.Data\bin\Debug\netcoreapp3.1\WebShopEF.Data.pdb
+C:\Users\Pufnica\source\repos\WebShopEF.Data\obj\Debug\netcoreapp3.1\WebShopEF.Data.dll
+C:\Users\Pufnica\source\repos\WebShopEF.Data\obj\Debug\netcoreapp3.1\WebShopEF.Data.pdb
+C:\Users\Pufnica\source\repos\WebShopEF.Data\bin\Debug\netcoreapp3.1\WebShopEF.Data.runtimeconfig.json
+C:\Users\Pufnica\source\repos\WebShopEF.Data\bin\Debug\netcoreapp3.1\WebShopEF.Data.runtimeconfig.dev.json

@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK" Version="2.3.55.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WebShop.Data\WebShop.Data.csproj" />
+    <ProjectReference Include="..\WebShop.Model\WebShop.Model.csproj" />
+    <ProjectReference Include="..\WebShopEF.Data\WebShopEF.Data.csproj" />
+  </ItemGroup>
+
+</Project>
