@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "de/IQLbiu7jBFsz7IHaO/NzKs5gaLU6FLNONwkwEZhlaLvk86HUsQXTLAOP9altbqroF6Sv0BPebCozVAEOKZQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Pufnica\\Desktop\\WebShop-ConsoleApp\\WebShopMVC\\WebShopMVC.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Pufnica\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}
