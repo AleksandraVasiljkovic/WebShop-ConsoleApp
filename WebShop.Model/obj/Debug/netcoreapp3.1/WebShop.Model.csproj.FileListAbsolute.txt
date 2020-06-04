@@ -6,3 +6,12 @@ C:\Users\Pufnica\source\repos\WebShop.Model\obj\Debug\netcoreapp3.1\WebShop.Mode
 C:\Users\Pufnica\source\repos\WebShop.Model\obj\Debug\netcoreapp3.1\WebShop.Model.dll
 C:\Users\Pufnica\source\repos\WebShop.Model\obj\Debug\netcoreapp3.1\WebShop.Model.pdb
 C:\Users\Pufnica\source\repos\WebShop.Model\obj\Debug\netcoreapp3.1\WebShop.Model.csprojAssemblyReference.cache
+C:\Users\Pufnica\Desktop\WebShop-ConsoleApp\WebShop.Model\bin\Debug\netcoreapp3.1\WebShop.Model.deps.json
+C:\Users\Pufnica\Desktop\WebShop-ConsoleApp\WebShop.Model\bin\Debug\netcoreapp3.1\WebShop.Model.dll
+C:\Users\Pufnica\Desktop\WebShop-ConsoleApp\WebShop.Model\bin\Debug\netcoreapp3.1\WebShop.Model.pdb
+C:\Users\Pufnica\Desktop\WebShop-ConsoleApp\WebShop.Model\obj\Debug\netcoreapp3.1\WebShop.Model.AssemblyInfoInputs.cache
+C:\Users\Pufnica\Desktop\WebShop-ConsoleApp\WebShop.Model\obj\Debug\netcoreapp3.1\WebShop.Model.AssemblyInfo.cs
+C:\Users\Pufnica\Desktop\WebShop-ConsoleApp\WebShop.Model\obj\Debug\netcoreapp3.1\WebShop.Model.csproj.CoreCompileInputs.cache
+C:\Users\Pufnica\Desktop\WebShop-ConsoleApp\WebShop.Model\obj\Debug\netcoreapp3.1\WebShop.Model.dll
+C:\Users\Pufnica\Desktop\WebShop-ConsoleApp\WebShop.Model\obj\Debug\netcoreapp3.1\WebShop.Model.pdb
+C:\Users\Pufnica\Desktop\WebShop-ConsoleApp\WebShop.Model\obj\Debug\netcoreapp3.1\WebShop.Model.csprojAssemblyReference.cache

@@ -15,7 +15,11 @@ namespace WebShop.Data
         {
             throw new NotImplementedException();
         }
-        
+
+        public CategoriesModel getCategoryByName(string name)
+        {
+            throw new NotImplementedException();
+        }
 
         public void InsertCategory(CategoriesModel categoriesModel)
         {

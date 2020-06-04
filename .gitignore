@@ -1,0 +1,6 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/WebShop/.vs/WebShop/v16/Server/sqlite3/storage.ide-shm
+/WebShop/.vs/WebShop/v16/Server/sqlite3/storage.ide-wal

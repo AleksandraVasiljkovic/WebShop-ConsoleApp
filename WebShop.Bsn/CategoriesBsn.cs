@@ -38,5 +38,10 @@ namespace WebShop.Bsn
         {
             categoriesData.DeleteCategory(id);
         }
+        public CategoriesModel getCategoryByNameBsn(string name)
+        {
+            CategoriesModel categoriesModel = categoriesData.getCategoryByName(name);
+            return categoriesModel;
+        }
     }
 }

@@ -45,6 +45,10 @@ namespace WebShop.Data
         {
             sqlCommand.ExecuteNonQuery();
         }
+        protected void ExecuteScalar()
+        {
+            sqlCommand.ExecuteScalar();
+        }
         protected void CloseSqlConnection()
         {
             sqlConnection.Close();

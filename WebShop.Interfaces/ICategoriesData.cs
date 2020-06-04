@@ -13,6 +13,7 @@ namespace WebShop.Interfaces
         void UpdateCategory(int id, CategoriesModel categoriesModel);
 
         void DeleteCategory(int id);
+        CategoriesModel getCategoryByName(string name);
 
     }
 }

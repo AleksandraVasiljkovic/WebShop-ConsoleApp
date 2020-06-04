@@ -106,5 +106,31 @@ namespace WebShop.Data
             }
 
         }
+        public BrandsModel getBrandByName(string name)
+        {
+            try
+            {
+                OpenSqlConnection();
+                SqlCommand sqlCommand = CreateCommandSc("GetBrandByName");
+                sqlCommand.Parameters.Add(new SqlParameter("@Name", name));
+                SqlDataReader sqlDataReader = GetExecuteReader();
+                BrandsModel brandsModel = new BrandsModel();
+                while (sqlDataReader.Read())
+                { 
+                brandsModel.BrandId = Convert.ToInt32(sqlDataReader["BrandId"]);
+                brandsModel.Name = sqlDataReader["Name"].ToString();
+                brandsModel.Country = sqlDataReader["Country"].ToString();
+                }
+                return brandsModel;
+            }
+            catch (SqlException ex)
+            {
+                throw new System.Exception(ex.Message);
+            }
+            finally
+            {
+                CloseSqlConnection();
+            }
+        }
     }
 }

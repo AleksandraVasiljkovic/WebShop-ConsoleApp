@@ -36,5 +36,10 @@ namespace WebShop.Bsn
         {
             brandsData.DeleteBrand(id);
         }
+        public BrandsModel getBrandByNameBsn(string name)
+        {
+            BrandsModel brandsModel = brandsData.getBrandByName(name);
+            return brandsModel;
+        }
     }
 }

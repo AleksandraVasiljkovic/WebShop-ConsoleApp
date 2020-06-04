@@ -13,5 +13,6 @@ namespace WebShop.Interfaces
         void UpdateBrand(int id, BrandsModel brandsModel);
 
         void DeleteBrand(int id);
+        BrandsModel getBrandByName(string name);
     }
 }

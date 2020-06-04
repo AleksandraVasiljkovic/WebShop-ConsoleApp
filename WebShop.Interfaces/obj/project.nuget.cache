@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "PaGdKO9ufS+ae9wZ2uI5GvY3DzMiYuqOr/rRHV7Ed/Kpmax1yrYstSAtxXIAz2KSWzrjveigVqQcY6BSMNPw/Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Pufnica\\Desktop\\WebShop-ConsoleApp\\WebShop.Interfaces\\WebShop.Interfaces.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Pufnica\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\Pufnica\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}

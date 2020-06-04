@@ -27,16 +27,16 @@ namespace WebShop.Bsn
         
         public void Update(int idU, ProductModel productModel)
         {
-            List<ProductModel> productModels = Read();
-            int id = Convert.ToInt32(productModels[idU].ProductId);
-            productData.UpdateProduct(id, productModel);
+            //List<ProductModel> productModels = Read();
+            //int id = Convert.ToInt32(productModels[idU].ProductId);
+            productData.UpdateProduct(idU, productModel);
         }
 
         public void Delete(int idD)
         {
-            List<ProductModel> productModels = Read();
-            int id = Convert.ToInt32(productModels[idD].ProductId);
-            productData.DeleteProduct(id);
+            //List<ProductModel> productModels = Read();
+            //int id = Convert.ToInt32(productModels[idD].ProductId);
+            productData.DeleteProduct(idD);
         }
 
 

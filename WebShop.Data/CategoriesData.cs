@@ -104,5 +104,32 @@ namespace WebShop.Data
             }
 
         }
+
+        public CategoriesModel getCategoryByName(string name)
+        {
+            try
+            {
+                OpenSqlConnection();
+                SqlCommand sqlCommand = CreateCommandSc("GetCategoryByName");
+                sqlCommand.Parameters.Add(new SqlParameter("@Name", name));
+                SqlDataReader sqlDataReader = GetExecuteReader();
+                CategoriesModel categoriesModel = new CategoriesModel();
+                while (sqlDataReader.Read())
+                {
+                    categoriesModel.CategoryId = Convert.ToInt32(sqlDataReader["CategoryId"]);
+                    categoriesModel.Name = sqlDataReader["Name"].ToString();
+                    categoriesModel.Description = sqlDataReader["Description"].ToString();
+                }
+                return categoriesModel;
+            }
+            catch (SqlException ex)
+            {
+                throw new System.Exception(ex.Message);
+            }
+            finally
+            {
+                CloseSqlConnection();
+            }
+        }
     }
 }

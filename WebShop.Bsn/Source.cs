@@ -6,6 +6,6 @@ namespace WebShop.Bsn
 {
     public class Source
     {
-        public static int DataStorage = 1;
+        public static int DataStorage = 0;
     }
 }

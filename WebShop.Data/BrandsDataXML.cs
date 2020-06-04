@@ -15,7 +15,12 @@ namespace WebShop.Data
         {
             throw new NotImplementedException();
         }
-        
+
+        public BrandsModel getBrandByName(string name)
+        {
+            throw new NotImplementedException();
+        }
+
         public void InsertBrand(BrandsModel brandsModel)
         {
             string path = "C:\\temp\\Brands.XML";
