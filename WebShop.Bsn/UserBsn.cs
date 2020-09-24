@@ -17,16 +17,25 @@ namespace WebShop.Bsn
         }
         public List<UserModel> Read()
         {
-            List<UserModel> userList = new List<UserModel>();
             return userData.ReadUsers();
         }
-        public void Insert(UserModel userModel)
+        public bool Insert(UserModel userModel)
         {
-            userData.InsertUser(userModel);
+            try
+            {
+                userData.InsertUser(userModel);
+                return true;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
         }
-        public void Update(int id, UserModel userModel)
+        public void Update(UserModel userModel)
         {
-            userData.UpdateUser(id, userModel);
+            userData.UpdateUser(userModel);
         }
 
         public void Delete(int id)
@@ -43,7 +52,20 @@ namespace WebShop.Bsn
             UserModel deletedUser = userData.DeleteMaxId(list);
             return deletedUser;
         }
+        public UserModel True(LoginModel loginModel)
+        {
+            try
+            {
+                UserModel userModel = userData.True(loginModel);
+                return userModel;
+            }
+            catch (Exception)
+            {
 
+                throw;
+            }
+
+        }
 
 
     }

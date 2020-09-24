@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Query.Internal;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query.Internal;
 using Microsoft.EntityFrameworkCore.Storage;
 using System;
 using System.Collections.Generic;
@@ -15,7 +16,11 @@ namespace WebShopEF.Data
     {
         public void DeleteOrder(int id)
         {
-            throw new NotImplementedException();
+            using (var context = new WebShopContext())
+            {
+                context.Remove(context.OrdersModel.Select(p => p.OrderId == id));
+                context.SaveChanges();
+            }
         }
 
         public void InsertOrder(OrdersModel ordersModel)
@@ -29,12 +34,32 @@ namespace WebShopEF.Data
 
         public List<OrdersModel> ReadOrders()
         {
-            throw new NotImplementedException();
+            using (var context = new WebShopContext())
+            {
+                List<OrdersModel> orders = context.OrdersModel.ToList();
+                return orders;
+            }
         }
 
-        public void UpdateOrder(int id, OrdersModel ordersModel)
+        public void UpdateOrder(OrdersModel ordersModel)
         {
-            throw new NotImplementedException();
+            using (var context = new WebShopContext())
+            {
+                var result = context.OrdersModel.SingleOrDefault(b => b.OrderId == ordersModel.OrderId);
+                if (result != null)
+                {
+                    try
+                    {
+                        context.OrdersModel.Attach(ordersModel);
+                        context.Entry(ordersModel).State = EntityState.Modified;
+                        context.SaveChanges();
+                    }
+                    catch (Exception ex)
+                    {
+                        throw;
+                    }
+                }
+            }
         }
     }
     

@@ -10,7 +10,7 @@ namespace WebShop.Interfaces
         List<OrdersModel> ReadOrders();
 
         void InsertOrder(OrdersModel ordersModel);
-        void UpdateOrder(int id, OrdersModel ordersModel);
+        void UpdateOrder(OrdersModel ordersModel);
 
         void DeleteOrder(int id);
     }

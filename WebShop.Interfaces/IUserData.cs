@@ -11,12 +11,13 @@ namespace WebShop.Interfaces
 
         void InsertUser(UserModel userModel);
 
-        void UpdateUser(int id, UserModel userModel);
+        void UpdateUser(UserModel userModel);
 
         void DeleteUser(int id);
 
         UserModel GetUserByName(string name);
 
         UserModel DeleteMaxId(List<UserModel> user);
+        UserModel True(LoginModel loginModel);
     }
 }

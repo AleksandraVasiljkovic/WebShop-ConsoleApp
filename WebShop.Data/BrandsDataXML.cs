@@ -45,7 +45,7 @@ namespace WebShop.Data
             return brand;
         }
 
-        public void UpdateBrand(int id, BrandsModel brandsModel)
+        public void UpdateBrand(BrandsModel brandsModel)
         {
             throw new NotImplementedException();
         }

@@ -63,14 +63,14 @@ namespace WebShop.Data
             }
 
         }
-        public void UpdateBrand(int id, BrandsModel brandsModel)
+        public void UpdateBrand(BrandsModel brandsModel)
         {
 
             try
             {
                 OpenSqlConnection();
                 SqlCommand sqlCommand = CreateCommandSc("UpdateBrand");
-                sqlCommand.Parameters.Add(new SqlParameter("@BrandId", id));
+                sqlCommand.Parameters.Add(new SqlParameter("@BrandId", brandsModel.BrandId));
                 sqlCommand.Parameters.Add(new SqlParameter("@Name", brandsModel.Name));
                 sqlCommand.Parameters.Add(new SqlParameter("@Country", brandsModel.Country));
                 ExecutedNonQuery();

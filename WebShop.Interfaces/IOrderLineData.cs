@@ -10,8 +10,10 @@ namespace WebShop.Interfaces
         List<OrderLineModel> ReadOrderLines();
 
         void InsertOrderLine(OrderLineModel orderLineModel);
-        void UpdateOrderLine(int id, OrderLineModel orderLineModel);
+        void UpdateOrderLine(OrderLineModel orderLineModel);
 
         void DeleteOrderLine(int id);
+        CheckoutModel ProductToCard(string sessionKey,List<ProductModel> productFromSessionCard);
+        int OrderToBase(int userId, decimal totalPrice);
     }
 }

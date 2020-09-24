@@ -1,0 +1,172 @@
+﻿@model WebShop.Model.ProductModel
+@{
+    ViewData["Title"] = "Index";
+}
+<!-- Hero Section Begin -->
+<section class="hero hero-normal">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="hero__categories">
+                    <div class="hero__categories__all">
+                        <i class="fa fa-bars"></i>
+                        <span>Categories</span>
+                    </div>
+                    <ul>
+                        @foreach (var item in Model.listCategory)
+                        {
+                        <li><a href="#" onclick="ClickCategory(@item.CategoryId)">@item.Name</a></li>
+                        }
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="hero__search">
+                    <div class="hero__search__form">
+                        <form action="#">
+                            <input id="search" type="text" placeholder="What do you need?">
+                            <button type="button" onclick="Search()" class="site-btn">SEARCH</button>
+                        </form>
+                    </div>
+                    <div class="hero__search__phone">
+                        <div class="hero__search__phone__icon">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div class="hero__search__phone__text">
+                            <h5>+65 11.188.888</h5>
+                            <span>support 24/7 time</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Hero Section End -->
+
+<section class="product spad" style="padding-top:0px">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-5">
+                <div class="sidebar">
+                    <div class="sidebar__item">
+                        <h4>Categories</h4>
+                        <ul>
+                            @foreach (var item in Model.listCategory)
+                            {
+                                <li><a href="#" onclick="ClickCategory(@item.CategoryId)">@item.Name</a></li>
+                            }
+                        </ul>
+                    </div>
+                    <div class="sidebar__item">
+                        <h4>Price</h4>
+                        <div class="price-range-wrap">
+                            <div class="price-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"
+                                 data-min="0" data-max="5000">
+                                <div class="ui-slider-range ui-corner-all ui-widget-header"></div>
+                                <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"></span>
+                                <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default"></span>
+                            </div>
+                            <div class="range-slider">
+                                <div class="price-input">
+                                    <input type="text" id="minamount">
+                                    <input type="text" id="maxamount">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @if (Model.IsAdmin)
+                    {
+                    <div class="sidebar__item"><a asp-action="Create">Create new product</a></div>
+
+                    }
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-7">
+                <div class="filter__item" id="partialView">
+                    
+                    @Html.Partial("_Product", Model);
+                </div>
+                
+                @*<div class="product__pagination">
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#"><i class="fa fa-long-arrow-right"></i></a>
+        </div>*@
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    function ClickCategory(id) {
+        $.ajax({
+            type: "GET",
+            url: '@Url.Action("GetProductsByCategory", "Products")',
+            data: { categoryId: id },
+            success: function (partialView) {
+                $("#partialView").html(partialView);
+            },
+            error: function () { alert('Error');}
+            });
+    }
+    function Search() {
+        var searchString = $("#search").val();
+        $.ajax({
+            type: "GET",
+            url: '@Url.Action("Search", "Products")',
+            data: { searchBy: searchString },
+            success: function (partialView) {
+                $("#partialView").html(partialView);
+            },
+            error: function() { alert('Error');}
+        });
+    }
+    function PriceRange(min,max) {
+        $.ajax({
+            type: "GET",
+            url: '@Url.Action("PriceRange", "Products")',
+            data: { min: min, max: max },
+            success: function (partialView) {
+                $("#partialView").html(partialView);
+            },
+            error: function () { alert('Error'); }
+        });
+    }
+    function ProductDetail(productId) {
+        $.ajax({
+            type: "GET",
+            url: '@Url.Action("ProductDetail", "Products")',
+            data: { productId: productId },
+            success: function () {
+            },
+            error: function () { alert('Error'); }
+        });
+    }
+    function ProductToSession(productId) {
+        var sessionQuantity = $("#sessionQuantity").val();
+        $.ajax({
+            type: "GET",
+            url: '@Url.Action("ProductToSession", "Products")',
+            data: { productId: productId, sessionQuantity: sessionQuantity},
+            success: function () {
+                var value = parseInt($("#card").html()) + 1;
+                console.log(value.toString());
+                $("#card").html(value.toString());
+            },
+            error: function () { alert('Error'); }
+        });
+    }
+    function SortBy() {
+        var sortBy=$("#sortBy").val();
+        $.ajax({
+            type: "GET",
+            url: '@Url.Action("SortBy", "Products")',
+            data: { sortBy: sortBy },
+            //success: function () {
+            //    alert('Svaka cast'); 
+            //},
+            //error: function () { alert('Error'); }
+        });
+    }
+</script>

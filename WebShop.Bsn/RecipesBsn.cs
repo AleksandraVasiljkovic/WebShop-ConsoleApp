@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using WebShop.Data;
 using WebShop.Interfaces;
 using WebShop.Model;
+using WebShopEF.Data;
+
 namespace WebShop.Bsn
 {
     public class RecipesBsn
@@ -10,26 +13,24 @@ namespace WebShop.Bsn
         public IRecipesData recipesData;
         public RecipesBsn()
         {
-            recipesData = new RecipesData();
+            recipesData = new RecipesEFData();
             if (Source.DataStorage == 1)
             {
                 recipesData = new RecipesJSON();
             }
         }
-        public List<RecipesModel> Read()
+        public async Task<List<RecipesModel>> Read()
         {
-            List<RecipesModel> recipesList = new List<RecipesModel>();
-            return recipesData.ReadRecipes();
-            
-
+            List<RecipesModel> recipesList =recipesData.ReadRecipes();
+            return recipesList;
         }
         public void Insert(RecipesModel recipesModel)
         {
             recipesData.InsertRecipe(recipesModel);
         }
-        public void Update(int id, RecipesModel recipesModel)
+        public void Update(RecipesModel recipesModel)
         {
-            recipesData.UpdateRecipe(id, recipesModel);
+            recipesData.UpdateRecipe(recipesModel);
         }
 
         public void Delete(int id)

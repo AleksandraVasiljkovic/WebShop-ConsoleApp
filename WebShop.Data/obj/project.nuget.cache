@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Z1QgGUO8nM89F/HHFrywBM2DLLis7d87zEg4m1cLRxb/zv8p8T1kwHSmX5FEl0U1LrZZZPpxQ1tyUxiZE4CoaQ==",
+  "dgSpecHash": "YP7WcBg7P0dCGkzpGPqkiS6THJzJ16t4VzSAHjQBzCYTp4XqCvpTqwA9EtHfC35pNUrRuUhYs5PpU3PqeNLnaQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Pufnica\\Desktop\\WebShop-ConsoleApp\\WebShop.Data\\WebShop.Data.csproj",
   "expectedPackageFiles": [
@@ -13,8 +13,7 @@
     "C:\\Users\\Pufnica\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\Pufnica\\.nuget\\packages\\system.data.sqlclient\\4.8.1\\system.data.sqlclient.4.8.1.nupkg.sha512",
     "C:\\Users\\Pufnica\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
-    "C:\\Users\\Pufnica\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
-    "C:\\Users\\Pufnica\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+    "C:\\Users\\Pufnica\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }

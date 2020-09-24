@@ -64,14 +64,14 @@ namespace WebShop.Data
             }
 
         }
-        public void UpdateOrderLine(int id, OrderLineModel orderLineModel)
+        public void UpdateOrderLine(OrderLineModel orderLineModel)
         {
 
             try
             {
                 OpenSqlConnection();
                 SqlCommand sqlCommand = CreateCommandSc("UpdateOrderLine");
-                sqlCommand.Parameters.Add(new SqlParameter("@OrderLineId", id));
+                sqlCommand.Parameters.Add(new SqlParameter("@OrderLineId", orderLineModel.OrderLineId));
                 sqlCommand.Parameters.Add(new SqlParameter("@OrderId", orderLineModel.OrderId));
                 sqlCommand.Parameters.Add(new SqlParameter("@ProductId", orderLineModel.ProductId));
                 sqlCommand.Parameters.Add(new SqlParameter("@Quantity", orderLineModel.Quantity));
@@ -107,6 +107,35 @@ namespace WebShop.Data
                 CloseSqlConnection();
             }
 
+        }
+        public void ProductToCard(int id)
+        {
+            try
+            {
+                OpenSqlConnection();
+                SqlCommand sqlCommand = CreateCommandSc("ProductToCard");
+                sqlCommand.Parameters.Add(new SqlParameter("@OrderId",1));
+                sqlCommand.Parameters.Add(new SqlParameter("@ProductId", id));
+                ExecutedNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                throw new System.Exception(ex.Message);
+            }
+            finally
+            {
+                CloseSqlConnection();
+            }
+        }
+
+        public CheckoutModel ProductToCard(string sessionKey,List<ProductModel> productFromSessionCard)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int OrderToBase(int userId, decimal totalPrice)
+        {
+            throw new NotImplementedException();
         }
     }
 }

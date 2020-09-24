@@ -21,13 +21,13 @@ using WebShopMVC;
 #nullable disable
 #nullable restore
 #line 2 "C:\Users\Pufnica\Desktop\WebShop-ConsoleApp\WebShopMVC\Views\_ViewImports.cshtml"
-using WebShopMVC.Models;
+using WebShop.Model;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7091c65830b0329e613be026ede8a57552863778", @"/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"835d07dddaa074d9c0bc6393df4a7ef25886155f", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"667fe8b3eea29b955d8a704b99d69c3ea38463c7", @"/Views/_ViewImports.cshtml")]
     public class Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

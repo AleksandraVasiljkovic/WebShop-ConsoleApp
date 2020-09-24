@@ -19,29 +19,29 @@ namespace WebShopWF
         public Products()
         {
             InitializeComponent();
-            GetCategories();
-            GetBrands();
+            //GetCategories();
+            //GetBrands();
         }
-        private void GetCategories()
-        {
-            CategoriesBsn categoriesBsn = new CategoriesBsn();
-            List<CategoriesModel> listCategories = categoriesBsn.Read();
-            foreach (var x in listCategories)
-            {
-                comboBox1.Items.Add(x.Name);
+        //private void GetCategories()
+        //{
+        //    CategoriesBsn categoriesBsn = new CategoriesBsn();
+        //    List<CategoriesModel> listCategories = categoriesBsn.Read();
+        //    foreach (var x in listCategories)
+        //    {
+        //        comboBox1.Items.Add(x.Name);
 
-            }
-        }
-        private void GetBrands()
-        {
-            BrandsBsn brandsBsn = new BrandsBsn();
-            List<BrandsModel> listBrands = brandsBsn.Read();
-            foreach (var x in listBrands)
-            {
-                comboBox2.Items.Add(x.Name);
+        //    }
+        //}
+        //private void GetBrands()
+        //{
+        //    BrandsBsn brandsBsn = new BrandsBsn();
+        //    List<BrandsModel> listBrands = brandsBsn.Read();
+        //    foreach (var x in listBrands)
+        //    {
+        //        comboBox2.Items.Add(x.Name);
 
-            }
-        }
+        //    }
+        //}
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -51,23 +51,23 @@ namespace WebShopWF
         {
              
         }
-        private void button1_Click(object sender, EventArgs e)
-        {
+        //private void button1_Click(object sender, EventArgs e)
+        //{
             
 
-            CategoriesBsn categoriesBsn = new CategoriesBsn();
-            CategoriesModel categoriesModel = categoriesBsn.getCategoryByNameBsn(comboBox1.SelectedItem.ToString());
-            int categoryId=Convert.ToInt32(categoriesModel.CategoryId);
+        //    CategoriesBsn categoriesBsn = new CategoriesBsn();
+        //    CategoriesModel categoriesModel = categoriesBsn.getCategoryByNameBsn(comboBox1.SelectedItem.ToString());
+        //    int categoryId=Convert.ToInt32(categoriesModel.CategoryId);
 
-            BrandsBsn brandsBsn = new BrandsBsn();
-            BrandsModel brandsModel = brandsBsn.getBrandByNameBsn(comboBox2.SelectedItem.ToString());
-            int brandId= Convert.ToInt32(brandsModel.BrandId);
+        //    BrandsBsn brandsBsn = new BrandsBsn();
+        //    BrandsModel brandsModel = brandsBsn.getBrandByNameBsn(comboBox2.SelectedItem.ToString());
+        //    int brandId= Convert.ToInt32(brandsModel.BrandId);
             
 
 
-            ProductModel productModel = new ProductModel(textBox1.Text,categoryId, brandId,Convert.ToInt32(textBox2.Text),Convert.ToDecimal(textBox3.Text));
-            productBsn.Insert(productModel);
-        }
+        //    ProductModel productModel = new ProductModel(textBox1.Text,categoryId, brandId,Convert.ToInt32(textBox2.Text),Convert.ToDecimal(textBox3.Text));
+        //    productBsn.Insert(productModel);
+        //}
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -79,25 +79,25 @@ namespace WebShopWF
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
+        //private void button3_Click(object sender, EventArgs e)
+        //{
             
-            CategoriesBsn categoriesBsn = new CategoriesBsn();
-            CategoriesModel categoriesModel = categoriesBsn.getCategoryByNameBsn(comboBox1.SelectedItem.ToString());
-            int categoryId = Convert.ToInt32(categoriesModel.CategoryId);
+        //    CategoriesBsn categoriesBsn = new CategoriesBsn();
+        //    CategoriesModel categoriesModel = categoriesBsn.getCategoryByNameBsn(comboBox1.SelectedItem.ToString());
+        //    int categoryId = Convert.ToInt32(categoriesModel.CategoryId);
 
-            BrandsBsn brandsBsn = new BrandsBsn();
-            BrandsModel brandsModel = brandsBsn.getBrandByNameBsn(comboBox2.SelectedItem.ToString());
-            int brandId = Convert.ToInt32(brandsModel.BrandId);
-
-
-            ProductModel productModelU = new ProductModel(textBox1.Text, categoryId, brandId, Convert.ToInt32(textBox2.Text), Convert.ToDecimal(textBox3.Text));
-            int idU = Convert.ToInt32(textBox4.Text);
-            productBsn.Update(idU, productModelU);
+        //    BrandsBsn brandsBsn = new BrandsBsn();
+        //    BrandsModel brandsModel = brandsBsn.getBrandByNameBsn(comboBox2.SelectedItem.ToString());
+        //    int brandId = Convert.ToInt32(brandsModel.BrandId);
 
 
+        //    ProductModel productModelU = new ProductModel(textBox1.Text, categoryId, brandId, Convert.ToInt32(textBox2.Text), Convert.ToDecimal(textBox3.Text));
+        //    int idU = Convert.ToInt32(textBox4.Text);
+        //    productBsn.Update(idU, productModelU);
 
-        }
+
+
+        //}
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -115,36 +115,36 @@ namespace WebShopWF
 
         }
 
-        private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            string productName = " ";
-            foreach (ListViewItem item in listView1.SelectedItems)
-            {
+        //private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
+        //{
+        //    string productName = " ";
+        //    foreach (ListViewItem item in listView1.SelectedItems)
+        //    {
                 
-                productName = item.Text;
-            }
+        //        productName = item.Text;
+        //    }
 
-            List<ProductModel> productModel = productBsn.Read();
-            ProductModel myProduct = productModel.Where(p => p.Name == productName).FirstOrDefault();
+        //    List<ProductModel> productModel = productBsn.Read();
+        //    ProductModel myProduct = productModel.Where(p => p.Name == productName).FirstOrDefault();
 
-            textBox4.Text = myProduct.ProductId.ToString();
-            textBox1.Text = myProduct.Name;
+        //    textBox4.Text = myProduct.ProductId.ToString();
+        //    textBox1.Text = myProduct.Name;
 
-            CategoriesBsn categoriesBsn = new CategoriesBsn();
-            List<CategoriesModel> categoryModel = categoriesBsn.Read();
-            CategoriesModel myCategory = categoryModel.Where(c => c.CategoryId == myProduct.CategoryId).FirstOrDefault();
-            comboBox1.SelectedItem = myCategory.Name;
+        //    CategoriesBsn categoriesBsn = new CategoriesBsn();
+        //    List<CategoriesModel> categoryModel = categoriesBsn.Read();
+        //    CategoriesModel myCategory = categoryModel.Where(c => c.CategoryId == myProduct.CategoryId).FirstOrDefault();
+        //    comboBox1.SelectedItem = myCategory.Name;
 
-            BrandsBsn brandBsn = new BrandsBsn();
-            List<BrandsModel> brandModel = brandBsn.Read();
-            BrandsModel myBrand = brandModel.Where(c => c.BrandId == myProduct.BrandId).FirstOrDefault();
-            comboBox2.SelectedItem = myBrand.Name;
+        //    BrandsBsn brandBsn = new BrandsBsn();
+        //    List<BrandsModel> brandModel = brandBsn.Read();
+        //    BrandsModel myBrand = brandModel.Where(c => c.BrandId == myProduct.BrandId).FirstOrDefault();
+        //    comboBox2.SelectedItem = myBrand.Name;
 
-            textBox2.Text = myProduct.Quantity.ToString();
-            textBox3.Text = myProduct.Price.ToString();
+        //    textBox2.Text = myProduct.Quantity.ToString();
+        //    textBox3.Text = myProduct.Price.ToString();
 
 
-        }
+        //}
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {

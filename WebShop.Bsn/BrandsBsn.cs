@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using WebShop.Data;
 using WebShop.Interfaces;
 using WebShop.Model;
+using WebShopEF.Data;
 
 namespace WebShop.Bsn
 {
@@ -11,7 +13,7 @@ namespace WebShop.Bsn
         public IBrandsData brandsData;
         public BrandsBsn()
         {
-            brandsData = new BrandsData();
+            brandsData = new BrandsEFData();
             if (Source.DataStorage==1)
             {
                 brandsData = new BrandsDataXML();
@@ -19,17 +21,15 @@ namespace WebShop.Bsn
         }
         public List<BrandsModel> Read()
         {
-            List<BrandsModel> brandsList = new List<BrandsModel>();
             return brandsData.ReadBrands();
-
         }
         public void Insert(BrandsModel brandsModel)
         {
             brandsData.InsertBrand(brandsModel);
         }
-        public void Update(int id, BrandsModel brandsModel)
+        public void Update(BrandsModel brandsModel)
         {
-            brandsData.UpdateBrand(id, brandsModel);
+            brandsData.UpdateBrand(brandsModel);
         }
 
         public void Delete(int id)

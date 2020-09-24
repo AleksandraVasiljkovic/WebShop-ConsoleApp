@@ -10,7 +10,7 @@ namespace WebShop.Interfaces
         List<BrandsModel> ReadBrands();
 
         void InsertBrand(BrandsModel brandsModel);
-        void UpdateBrand(int id, BrandsModel brandsModel);
+        void UpdateBrand(BrandsModel brandsModel);
 
         void DeleteBrand(int id);
         BrandsModel getBrandByName(string name);

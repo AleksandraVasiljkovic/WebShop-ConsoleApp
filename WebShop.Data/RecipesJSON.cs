@@ -41,7 +41,7 @@ namespace WebShop.Data
             return listRecipes;
         }
 
-        public void UpdateRecipe(int id, RecipesModel recipesModel)
+        public void UpdateRecipe(RecipesModel recipesModel)
         {
             throw new NotImplementedException();
         }

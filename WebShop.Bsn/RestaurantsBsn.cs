@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using WebShop.Data;
 using WebShop.Interfaces;
 using WebShop.Model;
+using WebShopEF.Data;
 
 namespace WebShop.Bsn
 {
@@ -11,27 +13,25 @@ namespace WebShop.Bsn
         public IRestaurantsData restaurantsData;
         public RestaurantsBsn()
         {
-            restaurantsData = new RestaurantsData();
+            restaurantsData = new RestaurantsEFData();
             if (Source.DataStorage == 1)
             {
                 restaurantsData = new RestaurantsJSON();
             }
         }
-        public List<RestaurantsModel> Read()
+        public async Task<List<RestaurantsModel>> Read()
         {
-            List<RestaurantsModel> RestaurantsList = new List<RestaurantsModel>();
-            return restaurantsData.ReadRestaurants();
-            
-
+            List<RestaurantsModel> restaurantsList = restaurantsData.ReadRestaurants();
+            return restaurantsList;
         }
         public void Insert(RestaurantsModel restaurantsModel)
         {
             restaurantsData.InsertRestaurant(restaurantsModel);
         }
-        public void Update(int id, RestaurantsModel restaurantsModel)
+        public void Update(RestaurantsModel restaurantsModel)
         {
 
-            restaurantsData.UpdateRestaurant(id, restaurantsModel);
+            restaurantsData.UpdateRestaurant(restaurantsModel);
         }
 
         public void Delete(int id)

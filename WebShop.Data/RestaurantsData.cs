@@ -65,14 +65,14 @@ namespace WebShop.Data
             }
 
         }
-        public void UpdateRestaurant(int id, RestaurantsModel restaurantsModel)
+        public void UpdateRestaurant(RestaurantsModel restaurantsModel)
         {
 
             try
             {
                 OpenSqlConnection();
                 SqlCommand sqlCommand = CreateCommandSc("UpdateRestaurant");
-                sqlCommand.Parameters.Add(new SqlParameter("@RestaurantId", id));
+                sqlCommand.Parameters.Add(new SqlParameter("@RestaurantId", restaurantsModel.RestaurantId));
                 sqlCommand.Parameters.Add(new SqlParameter("@Name", restaurantsModel.Name));
                 sqlCommand.Parameters.Add(new SqlParameter("@Address", restaurantsModel.Address));
                 sqlCommand.Parameters.Add(new SqlParameter("@WebSite", restaurantsModel.WebSite));

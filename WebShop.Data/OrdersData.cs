@@ -25,7 +25,7 @@ namespace WebShop.Data
                     ordersModel.OrderId = Convert.ToInt32(sqlDataReader["OrderId"]);
                     ordersModel.UserId = Convert.ToInt32(sqlDataReader["UserId"]);
                     ordersModel.Date = Convert.ToDateTime(sqlDataReader["Date"]);
-                    ordersModel.Price = Convert.ToDouble(sqlDataReader["Price"]);
+                    ordersModel.Price = Convert.ToDecimal(sqlDataReader["Price"]);
                     ordersList.Add(ordersModel);
                 }
                 return ordersList;
@@ -63,14 +63,14 @@ namespace WebShop.Data
             }
 
         }
-        public void UpdateOrder(int id, OrdersModel ordersModel)
+        public void UpdateOrder(OrdersModel ordersModel)
         {
 
             try
             {
                 OpenSqlConnection();
                 SqlCommand sqlCommand = CreateCommandSc("UpdateOrder");
-                sqlCommand.Parameters.Add(new SqlParameter("@OrderId", id));
+                sqlCommand.Parameters.Add(new SqlParameter("@OrderId", ordersModel.OrderId));
                 sqlCommand.Parameters.Add(new SqlParameter("@UserId", ordersModel.UserId));
                 sqlCommand.Parameters.Add(new SqlParameter("@Date", ordersModel.Date));
                 sqlCommand.Parameters.Add(new SqlParameter("@Price", ordersModel.Price));

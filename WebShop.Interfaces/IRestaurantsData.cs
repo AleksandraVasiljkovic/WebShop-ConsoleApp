@@ -10,7 +10,7 @@ namespace WebShop.Interfaces
         List<RestaurantsModel> ReadRestaurants();
 
         void InsertRestaurant(RestaurantsModel restaurantsModel);
-        void UpdateRestaurant(int id, RestaurantsModel restaurantsModel);
+        void UpdateRestaurant(RestaurantsModel restaurantsModel);
 
         void DeleteRestaurant(int id);
     }

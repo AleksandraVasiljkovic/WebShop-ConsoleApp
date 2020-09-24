@@ -67,14 +67,14 @@ namespace WebShop.Data
 
         }
 
-        public void UpdateUser(int id, UserModel userModel)
+        public void UpdateUser(UserModel userModel)
         {
 
             try
             {
                 OpenSqlConnection();
                 SqlCommand sqlCommand = CreateCommandSc("UpdateUser");
-                sqlCommand.Parameters.Add(new SqlParameter("@UserId", id));
+                sqlCommand.Parameters.Add(new SqlParameter("@UserId", userModel.UserId));
                 sqlCommand.Parameters.Add(new SqlParameter("@Name", userModel.Name));
                 sqlCommand.Parameters.Add(new SqlParameter("@LastName", userModel.LastName));
                 sqlCommand.Parameters.Add(new SqlParameter("@Address", userModel.Address));
@@ -130,6 +130,11 @@ namespace WebShop.Data
         }
 
         public UserModel DeleteMaxId(List<UserModel> user)
+        {
+            throw new NotImplementedException();
+        }
+
+        public UserModel True(LoginModel loginModel)
         {
             throw new NotImplementedException();
         }

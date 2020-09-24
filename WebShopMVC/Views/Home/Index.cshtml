@@ -1,8 +1,131 @@
-﻿@{
+﻿@model WebShop.Model.ProductModel
+@{
     ViewData["Title"] = "Home Page";
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!-- Hero Section Begin -->
+<section class="hero hero-normal">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="hero__categories">
+                    <div class="hero__categories__all">
+                        <i class="fa fa-bars"></i>
+                        <span>Categories</span>
+                    </div>
+                    <ul>
+                        @foreach (var item in Model.listCategory)
+                        {
+                            <li><a href="#" onclick="ClickCategory(@item.CategoryId)">@item.Name</a></li>
+                        }
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="hero__search">
+                    <div class="hero__search__form">
+                        <form action="#">
+                            <input id="search" type="text" placeholder="What do you need?">
+                            <button type="button" onclick="Search()" class="site-btn">SEARCH</button>
+                        </form>
+                    </div>
+                    <div class="hero__search__phone">
+                        <div class="hero__search__phone__icon">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div class="hero__search__phone__text">
+                            <h5>+65 11.188.888</h5>
+                            <span>support 24/7 time</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero__item set-bg" data-setbg="../../Images/banner.jpg">
+                    <div class="hero__text">
+                        <h2>Gluten Free</h2>
+                        <p>by Aleksandra Vasiljkovic</p>
+                        <a class="primary-btn" asp-area="" asp-controller="Products" asp-action="Index">SHOP NOW</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Hero Section End -->
+<!-- Discount Section Begin -->
+<section class="categories">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 col-md-7">
+                <div class="product__discount">
+                    <div class="section-title product__discount__title">
+                        <h2>Sale</h2>
+                    </div>
+                    <div class="row">
+                        <div class="product__discount__slider owl-carousel">
+                            @foreach (var item in Model.listProducts)
+                            {
+                                if (item.SalePrice < item.Price )
+                                {
+                                    <div class="col-lg-4">
+                                        <div class="product__discount__item">
+                                            <div class="product__discount__item__pic set-bg" data-setbg="../../Images/@item.ProductId&period;jpg">
+                                                <div class="product__discount__percent">%</div>
+                                                <ul class="product__item__pic__hover">
+                                                    <li><a href="#" onclick="ProductToSession(@item.ProductId)"><i class="fa fa-shopping-cart"></i></a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="product__discount__item__text">
+                                                <span>@item.categoryModel.Name</span>
+                                                <h5><a href="#" onclick="ProductDetail(@item.ProductId)">@item.Name</a></h5>
+                                                <div class="product__item__price">@item.SalePrice<span>@item.Price</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Discount Section End -->
+<script>
+    function Search() {
+        var searchString = $("#search").val();
+        $.ajax({
+            type: "GET",
+            url: '@Url.Action("Search", "Products")',
+            data: { searchBy: searchString },
+            success: function (partialView) {
+                $("#partialView").load(partialView);
+            },
+            error: function() { alert('Error');}
+        });
+    }
+    function ClickCategory(id) {
+        $.ajax({
+            type: "GET",
+            url: '@Url.Action("GetProductsByCategory", "Products")',
+            data: { categoryId: id },
+            success: function (partialView) {
+                $("#partialView").html(partialView);
+            },
+            error: function () { alert('Error');}
+            });
+    }
+    function ProductToSession(productId) {
+        var sessionQuantity = $("#sessionQuantity").val();
+        $.ajax({
+            type: "GET",
+            url: '@Url.Action("ProductToSession", "Products")',
+            data: { productId: productId, sessionQuantity: sessionQuantity},
+            success: function () {
+                var value = parseInt($("#card").html()) + 1;
+                console.log(value.toString());
+                $("#card").html(value.toString());
+            },
+            error: function () { alert('Error'); }
+        });
+    }
+</script>

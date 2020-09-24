@@ -43,7 +43,7 @@ namespace WebShop.Data
             return listRestaurants;
         }
 
-        public void UpdateRestaurant(int id, RestaurantsModel restaurantsModel)
+        public void UpdateRestaurant(RestaurantsModel restaurantsModel)
         {
             throw new NotImplementedException();
         }

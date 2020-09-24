@@ -16,18 +16,15 @@ namespace WebShop.Bsn
         }
         public List<OrdersModel> Read()
         {
-            List<OrdersModel> ordersList = new List<OrdersModel>();
             return ordersData.ReadOrders();
-            
-
         }
         public void Insert(OrdersModel ordersModel)
         {
             ordersData.InsertOrder(ordersModel);
         }
-        public void Update(int id, OrdersModel ordersModel)
+        public void Update(OrdersModel ordersModel)
         {
-            ordersData.UpdateOrder(id, ordersModel);
+            ordersData.UpdateOrder(ordersModel);
         }
 
         public void Delete(int id)

@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using WebShop.Data;
 using WebShop.Interfaces;
 using WebShop.Model;
+using WebShopEF.Data;
 
 namespace WebShop.Bsn
 {
@@ -11,27 +13,23 @@ namespace WebShop.Bsn
         public ICategoriesData categoriesData;
         public CategoriesBsn()
         {
-            categoriesData = new CategoriesData();
+            categoriesData = new CategoriesEFData();
             if (Source.DataStorage == 1)
             {
                 categoriesData = new CategoriesDataXML();
             }
         }
-        public List<CategoriesModel> Read()
+        public async Task<List<CategoriesModel>> Read()
         {
-            List<CategoriesModel> categoriesList = new List<CategoriesModel>();
             return categoriesData.ReadCategories();
-            
-            
-
         }
         public void Insert(CategoriesModel categoriesModel)
         {
             categoriesData.InsertCategory(categoriesModel);
         }
-        public void Update(int id, CategoriesModel categoriesModel)
+        public void Update(CategoriesModel categoriesModel)
         {
-            categoriesData.UpdateCategory(id, categoriesModel);
+            categoriesData.UpdateCategory(categoriesModel);
         }
 
         public void Delete(int id)
@@ -43,5 +41,6 @@ namespace WebShop.Bsn
             CategoriesModel categoriesModel = categoriesData.getCategoryByName(name);
             return categoriesModel;
         }
+        
     }
 }

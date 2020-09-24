@@ -1,0 +1,110 @@
+﻿@model WebShop.Model.ProductModel
+
+@{
+    ViewData["Title"] = "ProductDetail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- Hero Section Begin -->
+<section class="hero hero-normal">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="hero__categories">
+                    <div class="hero__categories__all">
+                        <i class="fa fa-bars"></i>
+                        <span>Categories</span>
+                    </div>
+                    <ul>
+                        @foreach (var item in Model.listCategory)
+                        {
+                            <li><a href="#" onclick="ClickCategory(@item.CategoryId)">@item.Name</a></li>
+                        }
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="hero__search">
+                    <div class="hero__search__form">
+                        <form action="#">
+                            <input id="search" type="text" placeholder="What do you need?">
+                            <button type="button" onclick="Search()" class="site-btn">SEARCH</button>
+                        </form>
+                    </div>
+                    <div class="hero__search__phone">
+                        <div class="hero__search__phone__icon">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div class="hero__search__phone__text">
+                            <h5>+65 11.188.888</h5>
+                            <span>support 24/7 time</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Hero Section End -->
+<!-- Product Details Section Begin -->
+<section class="product-details spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <div class="product__details__pic">
+                    <div class="product__details__pic__item">
+                        <img class="product__details__pic__item--large"
+                             src="../../Images/@Model.ProductId&period;jpg" alt="">
+                    </div>
+                </div>
+            </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="product__details__text">
+                        <h3>@Model.Name</h3>
+                        @*<div class="product__details__rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <span>(18 reviews)</span>
+                        </div>*@
+                    <div class="product__details__price" id="sessionPrice">
+                        @Model.SalePrice
+                    </div>
+                        <p>
+                            @Model.categoryModel.Name
+                            <br>
+                            @Model.brandModel.Name
+                        </p>
+                        <div class="product__details__quantity">
+                            <div class="quantity">
+                                <div class="pro-qty">
+                                    <input id="sessionQuantity" type="text" value="1">
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="primary-btn" onclick="ProductToSession(@Model.ProductId)">ADD TO CARD</a>
+                    </div>
+                </div>
+         </div>
+     </div>
+    
+</section>
+<!-- Product Details Section End -->
+<script>
+    function ProductToSession(productId) {
+        var sessionQuantity = $("#sessionQuantity").val();
+        $.ajax({
+            type: "GET",
+            url: '@Url.Action("ProductToSession", "Products")',
+            data: { productId: productId, sessionQuantity: sessionQuantity},
+            success: function () {
+                var value = parseInt($("#card").html()) + 1;
+                console.log(value.toString());
+                $("#card").html(value.toString());
+            },
+            error: function () { alert('Error'); }
+        });
+    }
+</script>
+

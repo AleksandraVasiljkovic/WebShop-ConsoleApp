@@ -61,14 +61,14 @@ namespace WebShop.Data
             }
 
         }
-        public void UpdateCategory(int id, CategoriesModel categoriesModel)
+        public void UpdateCategory(CategoriesModel categoriesModel)
         {
 
             try
             {
                 OpenSqlConnection();
                 SqlCommand sqlCommand = CreateCommandSc("UpdateCategory");
-                sqlCommand.Parameters.Add(new SqlParameter("@CategoryId", id));
+                sqlCommand.Parameters.Add(new SqlParameter("@CategoryId", categoriesModel.CategoryId));
                 sqlCommand.Parameters.Add(new SqlParameter("@Name", categoriesModel.Name));
                 sqlCommand.Parameters.Add(new SqlParameter("@Description", categoriesModel.Description));
                 ExecutedNonQuery();

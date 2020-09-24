@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Ci5eGPq9nASTaDhjYxolIHRAwjK3pQSPa7tNMfzC/b8LWKsvYNI8k8Mjx2HiIigOetI5HJRiQ9UsCaS37ndTGQ==",
+  "dgSpecHash": "S/bbke0tPzbZ4AkVYWcY9gfcnTa5swjOaf+O+EDcTFDqmX+PudOtM3FSx78U0wb9Y/e8RCOfl6N77zRNeBzL/A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Pufnica\\Desktop\\WebShop-ConsoleApp\\WebShop\\WebShop.UI.Consol.csproj",
   "expectedPackageFiles": [
@@ -93,8 +93,7 @@
     "C:\\Users\\Pufnica\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Pufnica\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Pufnica\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Pufnica\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\Pufnica\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+    "C:\\Users\\Pufnica\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
   "logs": [
     {

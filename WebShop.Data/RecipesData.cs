@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using WebShop.Model;
 using WebShop.Interfaces;
+using System.Threading.Tasks;
 
 namespace WebShop.Data
 {
@@ -21,7 +22,7 @@ namespace WebShop.Data
                 while (sqlDataReader.Read())
                 {
                     RecipesModel recipesModel = new RecipesModel();
-                    recipesModel.RecipesId = Convert.ToInt32(sqlDataReader["RecipesId"]);
+                    recipesModel.RecipeId = Convert.ToInt32(sqlDataReader["RecipeId"]);
                     recipesModel.Name = sqlDataReader["Name"].ToString();
                     recipesModel.Description = sqlDataReader["Description"].ToString();
                     recipesList.Add(recipesModel);
@@ -60,14 +61,14 @@ namespace WebShop.Data
             }
 
         }
-        public void UpdateRecipe(int id, RecipesModel recipesModel)
+        public void UpdateRecipe(RecipesModel recipesModel)
         {
 
             try
             {
                 OpenSqlConnection();
                 SqlCommand sqlCommand = CreateCommandSc("UpdateRecipe");
-                sqlCommand.Parameters.Add(new SqlParameter("@RecipeId", id));
+                sqlCommand.Parameters.Add(new SqlParameter("@RecipeId", recipesModel.RecipeId));
                 sqlCommand.Parameters.Add(new SqlParameter("@Name", recipesModel.Name));
                 sqlCommand.Parameters.Add(new SqlParameter("@Description", recipesModel.Description));
                 ExecutedNonQuery();
@@ -103,5 +104,7 @@ namespace WebShop.Data
             }
 
         }
+
+        
     }
 }

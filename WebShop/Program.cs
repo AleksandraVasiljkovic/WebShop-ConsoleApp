@@ -86,7 +86,7 @@ namespace WebShop
             //    Console.WriteLine(l.ToString());
             //}
 
-            //UserModel userModel = new UserModel("Radovan", "Jovanovic", "Vidikovac", "0637467904", "radovanjovanovic@gmail.com");
+            //UserModel userModel = new UserModel("Pera", "Peric", "Petrovac", "0631234567", "peraperic@gmail.com");
             //userBsn.Insert(userModel);
             //userBsn.Read();
 

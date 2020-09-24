@@ -1,0 +1,87 @@
+﻿@model WebShop.Model.ProductModel
+
+<div class="row">
+    <div class="col-lg-4 col-md-5">
+        <div class="filter__sort">
+            <span>Sort By</span>
+            <select  id="sortBy">
+                <option  value="Name">Name</option>
+                <option value="Price">Price</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-4">
+        <div class="filter__found">
+            <h6><span>@Model.listProducts.Count</span> Products found</h6>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-3">
+        <div class="filter__option">
+            <span class="icon_grid-2x2"></span>
+            <span class="icon_ul"></span>
+        </div>
+    </div>
+</div>
+                </div>
+<div class="row">
+    @foreach (var item in Model.listProducts)
+    {
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="product__item">
+                <div class="product__item__pic set-bg" data-setbg="~/../../Images/@item.ProductId&period;jpg" id="loader">
+                    <ul class="product__item__pic__hover">
+                        <li><a href="#" onclick="ProductToSession(@item.ProductId)"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+                <div class="product__item__text ">
+                    @*<span>@item.categoryModel.Name</span>*@
+                    <h5><a href="#" onclick="ProductDetail(@item.ProductId)">@item.Name</a></h5>
+                    <div class="product__discount__item__text">
+                        @if (item.SalePrice < item.Price)
+                        {
+                            <div class="product__item__price">@item.SalePrice<span>@item.Price</span></div>
+                        }
+                        else
+                        {
+                            <div class="product__item__price">@item.SalePrice</div>
+                        }
+                    </div>
+                </div>
+                <div class="card-footer">
+                    @if (Model.IsAdmin)
+                    {
+                        <button>@Html.ActionLink("Edit", "Edit", new { item.ProductId })</button>
+                        <button>@Html.ActionLink("Delete", "Delete", new { item.ProductId })</button>
+                    }
+                    <button>@Html.ActionLink("ProductDetail", "ProductDetail", new { item.ProductId })</button>
+                </div>
+            </div>
+        </div>
+
+    }
+</div>
+<script>
+    function SortBy() {
+        var sortBy=$("#sortBy").val();
+        $.ajax({
+            type: "GET",
+            url: '@Url.Action("SortBy", "Products")',
+            data: { sortBy: sortBy },
+            success: function (partialView) {
+                $("#partialView").html(partialView);
+            },
+            error: function () { alert('Error'); }
+        });
+    }
+    function ProductDetail(productId) {
+        $.ajax({
+            type: "GET",
+            url: '@Url.Action("ProductDetail", "Products")',
+            data: { productId: productId },
+            success: function () {
+            },
+            error: function () { alert('Error'); }
+        });
+    }
+
+</script>

@@ -44,7 +44,7 @@ namespace WebShop.Data
             return category;
         }
 
-        public void UpdateCategory(int id, CategoriesModel categoriesModel)
+        public void UpdateCategory(CategoriesModel categoriesModel)
         {
             throw new NotImplementedException();
         }

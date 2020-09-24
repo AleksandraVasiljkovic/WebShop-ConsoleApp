@@ -10,7 +10,7 @@ namespace WebShop.Interfaces
         List<CategoriesModel> ReadCategories();
 
         void InsertCategory(CategoriesModel categoriesModel);
-        void UpdateCategory(int id, CategoriesModel categoriesModel);
+        void UpdateCategory(CategoriesModel categoriesModel);
 
         void DeleteCategory(int id);
         CategoriesModel getCategoryByName(string name);

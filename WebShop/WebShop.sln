@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebShopEF.Data", "..\WebSho
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebShopWF", "..\WebShopWF\WebShopWF.csproj", "{57E04983-9982-4D70-ACFD-BCBD38F77D6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebShopMVC", "..\WebShopMVC\WebShopMVC.csproj", "{BFC2FFC8-0852-4C0B-A400-291941E1EB54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebShopMVC", "..\WebShopMVC\WebShopMVC.csproj", "{BFC2FFC8-0852-4C0B-A400-291941E1EB54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebShop.WebAPI", "..\WebShop.WebAPI\WebShop.WebAPI.csproj", "{C41D1767-F643-4073-BEDB-04259A0C8882}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{BFC2FFC8-0852-4C0B-A400-291941E1EB54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFC2FFC8-0852-4C0B-A400-291941E1EB54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFC2FFC8-0852-4C0B-A400-291941E1EB54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C41D1767-F643-4073-BEDB-04259A0C8882}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C41D1767-F643-4073-BEDB-04259A0C8882}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C41D1767-F643-4073-BEDB-04259A0C8882}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C41D1767-F643-4073-BEDB-04259A0C8882}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

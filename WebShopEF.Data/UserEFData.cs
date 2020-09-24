@@ -12,10 +12,13 @@ namespace WebShopEF.Data
     {
         public void DeleteUser(int id)
         {
-            throw new NotImplementedException();
+            using (var context = new WebShopContext())
+            {
+                context.Remove(context.UserModel.Select(p => p.UserId == id));
+                context.SaveChanges();
+            }
         }
 
-       
         public void InsertUser(UserModel userModel)
         {
             using (var context = new WebShopContext())
@@ -35,11 +38,25 @@ namespace WebShopEF.Data
 
         }
 
-        
-
-        public void UpdateUser(int id, UserModel userModel)
+        public void UpdateUser(UserModel userModel)
         {
-            throw new NotImplementedException();
+            using (var context = new WebShopContext())
+            {
+                var result = context.UserModel.SingleOrDefault(b => b.UserId == userModel.UserId);
+                if (result != null)
+                {
+                    try
+                    {
+                        context.UserModel.Attach(userModel);
+                        context.Entry(userModel).State = EntityState.Modified;
+                        context.SaveChanges();
+                    }
+                    catch (Exception ex)
+                    {
+                        throw;
+                    }
+                }
+            }
         }
 
         public UserModel GetUserByName(string name)
@@ -63,6 +80,13 @@ namespace WebShopEF.Data
                 
             }
         }
-
+        public UserModel True(LoginModel loginModel)
+        {
+            using (var context = new WebShopContext())
+            {
+                UserModel user = context.UserModel.Where(u => u.Email == loginModel.Email && u.Password==loginModel.Password).FirstOrDefault();
+                return user;
+            }
+        }
     }
 }
